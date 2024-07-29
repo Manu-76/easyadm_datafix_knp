@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomepageController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    {# .navigation .page-item.active .page-link { background-color: 'blue'} #}
+</style>
+
+<div class="example-wrapper">
+    <h1>Nos Livres</h1>
+
+    <div class="row my-5">
+        {% for book in books %}
+            <div class="col-4">
+                <h2>{{ book.title }}</h2>
+                <h3>{{ book.autor.firstname ~ ' ' ~ book.autor.lastname }}</h3>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="navigation ms-5">
+    {{ knp_pagination_render(books) }}
+</div>
+
+{% endblock %}

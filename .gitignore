@@ -9,6 +9,11 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
+###> symfony/others folders ###
+/migrations
+.env
+###< symfony/others folders ###
+
 ###> phpunit/phpunit ###
 /phpunit.xml
 .phpunit.result.cache
